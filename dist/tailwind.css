@@ -598,6 +598,20 @@ video {
 .container {
   width: 100%;
 }
+@media (max-width: 640px) {
+  .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .start-recording,
+  .stop-recording,
+  .download-video {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
 
 @media (min-width: 640px) {
   .container {
