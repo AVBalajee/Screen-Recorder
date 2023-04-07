@@ -10,10 +10,8 @@ let stream = null,
 
 async function setupStream () {
 	try {
-		stream = await navigator.mediaDevices.getUserMedia({
-			video: {
-				mediaSource: "screen"
-			}
+		stream = await navigator.mediaDevices.getDisplayMedia({
+			video: true
 		});
 
 		audio = await navigator.mediaDevices.getUserMedia({
@@ -102,4 +100,4 @@ window.addEventListener('load', () => {
 
 	startButton.addEventListener('click', startRecording);
 	stopButton.addEventListener('click', stopRecording);
-});
+})
